@@ -1,133 +1,260 @@
+:root {
+    --color-primary: #3c3c86;      /* Medium gray */
+    --color-white: #f0f0f0;        /* Off-white */
+    --color-active: #808080;       /* Olive green */
+    --color-background: #dcdcdc;   /* Light gray background */
+}
+
+
+/*SCROLL COLOUR*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* NAV BAR */
+
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     text-decoration: none;
     list-style: none;
-    font-family: "ubuntu";
+    box-sizing: border-box;
 }
 
-img {
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-background);
+
+}
+
+nav {
+    background-color: var(--color-primary);
+    height: 80px;
     width: 100%;
 }
 
-header {
-    height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 50px;
-    background: #0b2239;
-}
-
-header .header-left {
-    display: flex;
-    align-items: center;
-}
-
-header .header-left .logo {
-    width: 140px;
-}
-
-header .header-left nav {
-    margin-left: 50px;
-}
-
-header .header-left nav ul {
-    display: flex;
-}
-
-nav ul li a {
-    display: block;
-    color: #cfd9e0;
-    font-size: 18px;
-    padding: 5px 10px;
-    transition: 0.2s;
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-    color: #fff;
-}
-
-nav .login-signup {
-    display: none;
-}
-
-header .header-right {
-    display: flex;
-    align-items: center;
-}
-
-header .login-signup {
-    color: #cfd9e0;
+label.logo {
+    color: var(--color-white);
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
     font-weight: bold;
 }
 
-header .login-signup a {
-    display: inline-block;
-    color: #0b2239;
-    background: #4ad295;
-    padding: 5px 12px;
-    border-radius: 5px;
+nav ul {
+    float: right;
+    margin-right: 20px;
 }
 
-header .header-right .hamburger {
-    margin-left: 20px;
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+    color: var(--color-white);
+}
+
+nav ul li a {
+    color: var(--color-white);
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.nav:hover {
+    background-color: var(--color-active);
+    color: var(--color-primary);
+}
+
+.active {
+    background-color: var(--color-active);
+    color: var(--color-primary);
+}
+
+
+.checkbtn {
+    font-size: 30px;
+    color: var(--color-white);
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
     cursor: pointer;
     display: none;
 }
 
-header .header-right .hamburger div {
-    width: 30px;
-    height: 2px;
-    margin: 6px 0;
-    background: #fff;
+#check {
+    display: none;
 }
 
-@media only screen and (max-width: 1000px) {
-    header {
-        padding: 0 20px;
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
     }
 
-    header .header-right .hamburger {
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
         display: block;
     }
 
-    header .header-left nav {
-        margin: 0;
-        position: absolute;
-        top: -100%;
-        left: 0;
+    ul {
+        position: fixed;
         width: 100%;
-        height: fit-content;
-        background-color: #0b2239;
-        padding: 30px;
-        transition: 0.3s;
+        height: 100vh;
+        background-color: var(--color-background);
+        top: 80px;
+        left: -100%;
         text-align: center;
-        z-index: -1;
+        transition: all .5s;
     }
 
-    header .header-left nav.active {
-        top: 70px;
-    }
-
-    header .header-left nav ul {
+    nav ul li {
         display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: var(--color-active);
+    }
+
+    #check:checked~ul {
+        left: 0;
     }
 }
 
-@media only screen and (max-width: 500px) {
-    nav .login-signup {
-        display: block;
-        margin-top: 20px;
+label:hover {
+    cursor: pointer;
+}
+
+
+
+/* footer */
+
+footer {
+    background-color:  var(--color-primary);
+    color: var(--color-white);
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+footer .heading {
+    color: #fefefe;
+    max-width: 1010px;
+    width: 90%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: "Poppins", sans-serif;
+}
+
+footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+}
+
+footer .content p {
+    margin-bottom: 1.3rem;
+}
+
+footer .content a {
+    text-decoration: none;
+    color: #fefefe;
+}
+
+footer .content a:hover {
+    border-bottom: 1px solid #971717;
+}
+
+footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 19px;
+}
+
+footer #UpBtn{
+padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0082e6;
+    /* Button color */
+    color: #ffffff;
+    /* Text color */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    /* Apply the pulsing animation */
+    box-shadow: 0 0 0 rgba(0, 130, 230, 0.5);
+    /* Initial shadow with no blur */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 130, 230, 0.5);
+        /* Start with a shadow */
     }
 
-    header .header-right .login-signup {
-        display: none;
+    25% {
+        box-shadow: 0 0 20px rgba(0, 130, 230, 0.9);
+        /* Increase shadow size at 25% */
+    }
+
+    50% {
+        box-shadow: 0 0 20px rgba(0, 130, 230, 0.9);
+        /* Increase shadow size at 50% */
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 130, 230, 0.5);
+        /* Return to the original shadow */
+    }
+}
+@media (max-width: 767px) {
+    footer .content {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+    }
+
+    footer {
+        position: unset;
     }
 }
 
-body {
-    background: #f2f2f2;
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    footer .content,
+    .footer {
+        font-size: 14px;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+    footer {
+        position: unset;
+    }
 }
