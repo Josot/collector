@@ -2,6 +2,7 @@
     --color-primary: #3c3c86;      /* Medium gray */
     --color-white: #f0f0f0;        /* Off-white */
     --color-active: #808080;       /* Olive green */
+    --color-button: #006ec2;
     --color-background: #dcdcdc;   /* Light gray background */
 }
 
@@ -40,7 +41,8 @@ body {
 }
 
 nav {
-    background-color: var(--color-primary);
+    background: rgb(63, 63, 198);
+    background: linear-gradient(90deg, rgba(63, 63, 198, 1) 33%, rgba(9, 9, 121, 1) 100%);
     height: 80px;
     width: 100%;
 }
@@ -175,7 +177,7 @@ footer .heading {
 footer .content {
     display: flex;
     justify-content: space-evenly;
-    margin: 1.5rem;
+    
 }
 
 footer .content p {
@@ -192,14 +194,14 @@ footer .content a:hover {
 }
 
 footer .content h4 {
-    margin-bottom: 1.3rem;
+    margin: 1.5rem 0 1rem 0;
     font-size: 19px;
 }
 
 footer #UpBtn{
 padding: 10px 20px;
     font-size: 16px;
-    background-color: #0082e6;
+    background-color: var(--color-button);
     /* Button color */
     color: #ffffff;
     /* Text color */
@@ -209,6 +211,9 @@ padding: 10px 20px;
     animation: pulse 2s infinite;
     /* Apply the pulsing animation */
     box-shadow: 0 0 0 rgba(0, 130, 230, 0.5);
+    margin-bottom: 20px;
+    margin-left: 25%;
+    
     /* Initial shadow with no blur */
 }
 
@@ -219,15 +224,18 @@ padding: 10px 20px;
     }
 
     25% {
-        box-shadow: 0 0 20px rgba(0, 130, 230, 0.9);
+        box-shadow: 0 0 20px rgba(0, 130, 230, 1.9);
         /* Increase shadow size at 25% */
     }
 
     50% {
-        box-shadow: 0 0 20px rgba(0, 130, 230, 0.9);
+        box-shadow: 0 0 20px rgba(0, 130, 230, 2);
         /* Increase shadow size at 50% */
     }
-
+    75% {
+        box-shadow: 0 0 20px rgba(0, 130, 230, 0.9);
+        /* Decrease shadow size at 75% */
+    }
     100% {
         box-shadow: 0 0 10px rgba(0, 130, 230, 0.5);
         /* Return to the original shadow */
@@ -238,10 +246,14 @@ padding: 10px 20px;
         display: flex;
         flex-direction: column;
         font-size: 14px;
+        text-align: center;
     }
 
     footer {
         position: unset;
+    }
+    footer #UpBtn{
+        margin-left: 0px;
     }
 }
 
