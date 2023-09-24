@@ -2,7 +2,7 @@
     --color-primary: #3c3c86;      /* Medium gray */
     --color-white: #f0f0f0;        /* Off-white */
     --color-active: #808080;       /* Olive green */
-    --color-button: #006ec2;
+    --color-button: #006ec2;        
     --color-background: #dcdcdc;   /* Light gray background */
 }
 
@@ -41,17 +41,23 @@ body {
 }
 
 nav {
-    background: rgb(63, 63, 198);
-    background: linear-gradient(90deg, rgba(63, 63, 198, 1) 33%, rgba(9, 9, 121, 1) 100%);
+    background: rgb(94, 94, 180);
+    background: linear-gradient(90deg, rgba(94, 94, 180, 1) 0%, rgba(60, 60, 134, 1) 100%);
     height: 80px;
     width: 100%;
 }
 
-label.logo {
+.logo_img{
+    height: 100%;
+    width: auto;
+}
+
+
+label.name {
     color: var(--color-white);
     font-size: 35px;
     line-height: 80px;
-    padding: 0 100px;
+    padding-left: 100px;
     font-weight: bold;
 }
 
@@ -101,8 +107,8 @@ nav ul li a {
 }
 
 @media (max-width: 952px) {
-    label.logo {
-        font-size: 30px;
+    label.name {
+        font-size: 25px;
         padding-left: 50px;
     }
 
@@ -135,6 +141,7 @@ nav ul li a {
 
     nav ul li a {
         font-size: 20px;
+        color: black;
     }
 
     a:hover,
@@ -211,7 +218,7 @@ padding: 10px 20px;
     animation: pulse 2s infinite;
     /* Apply the pulsing animation */
     box-shadow: 0 0 0 rgba(0, 130, 230, 0.5);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     margin-left: 25%;
     
     /* Initial shadow with no blur */

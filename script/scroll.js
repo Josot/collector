@@ -4,7 +4,7 @@ function topFunction() {
         const c = document.documentElement.scrollTop || document.body.scrollTop;
         if (c > 0) {
             window.requestAnimationFrame(scrollToTop);
-            window.scrollTo(0, c - c / 10); // You can adjust the division value to control the animation speed
+            window.scrollTo(0, c - c / 30); // You can adjust the division value to control the animation speed
         }
     };
     scrollToTop();
