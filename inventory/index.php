@@ -75,42 +75,6 @@
 
         <div id="inventory" class="inventory">
             <div class="container-inv">
-                <!-- <div class="navbar-inventory">
-                    <div class="search-bar">
-                        <h1>Search Our Inventory</h1>
-                        <form method="GET" action="search.php">
-                            <input type="text" class="search-input" name="search" placeholder="Search by make or model">
-                            <button class="search-button" type="submit">Search</button>
-                        </form>
-                    </div>
-                    <div class="links">
-                        <ul>
-                            <li>
-                                <a class="active-inv" href="#inventory">Current Inventory</a>
-                            </li>
-                            <li>
-                                <a href="../inventory/sold/#inventory">Sold Inventory</a>
-                            </li>
-                            <li>
-                                <a href="../inventory/coming-soon/#inventory">Coming Soon?</a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="mobile-link">
-                        <ul>
-                            <li>
-                                <a href="../inventory/#inventory">Current Inventory</a>
-                            </li>
-                            <li>
-                                <a href="../inventory/sold/#inventory">Sold Inventory</a>
-                            </li>
-                            <li>
-                                <a href="../inventory/coming-soon/#inventory">Coming Soon?</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div> -->
                 
                 <img src="../dbs/inventory.db" alt="">
 
@@ -144,23 +108,23 @@
                         if ($row['sold'] == 'true') {
                             continue;
                         }
-                        if ($row['comingsoon'] == 'true') {
-                            continue;
-                        }
-                        if ($row['reserved'] == 'yes') {
-                            continue;
-                        }
+                        // if ($row['comingsoon'] == 'true') {
+                        //     continue;
+                        // }
+                        // if ($row['reserved'] == 'yes') {
+                        //     continue;
+                        // }
 
                         $product_id = $row['ID'];
 
                         echo "<projects>";
                             echo "<div class='hidden'>{$row['ID']}</div>";
                             echo "<div class='hidden'>Sold? {$row['sold']}</div>";
-                            echo "<div class='hidden'>Gereserveerd? {$row['reserved']}</div>";
-                            echo "<div class='hidden'>Coming: {$row['comingsoon']}</div>";
+                            // echo "<div class='hidden'>Gereserveerd? {$row['reserved']}</div>";
+                            // echo "<div class='hidden'>Coming: {$row['comingsoon']}</div>";
                             echo "<div class=''><h1>{$row['brand']}</h1></div>";
                             echo "<div class=''><h2>{$row['model']}</h2></div>";
-                            echo "<div class=''><h3>{$row['consy']}</h3></div>";
+                            echo "<div class=''><h3>{$row['consty']}</h3></div>";
                             echo "<div class=''>{$row['price']}</div>";
                             echo "<img class='car-img-inv' src='../media/uploads/{$row['image']}'>";
                             echo "<div class=''>Engine: {$row['engine']}</div>";

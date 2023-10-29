@@ -28,16 +28,10 @@
                     <div class="links">
                         <ul>
                             <li>
-                                <a href="">Sell us your car!</a>
-                            </li>
-                            <li>
-                                <a href="">About us</a>
+                                <a href="../about-us/">About us</a>
                             </li>
                             <li>
                                 <a href="../inventory/">Inventory</a>
-                            </li>
-                            <li>
-                                <a href="">Blog</a>
                             </li>
                             <li>
                                 <a href="../" class="active">Home</a>
@@ -49,7 +43,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- NAVBAR -->
 
             <?php
             class MyDB extends SQLite3
@@ -91,7 +84,7 @@
 
                                     echo "<h1 class=header-title'>{$product['brand']} {$product['model']}</h1>";
                                     echo "<h1 class=header-title'>{$product['price']}</h1>";
-                                    echo "<h2 class=header-title'>{$product['consy']}</h2>";
+                                    echo "<h2 class=header-title'>{$product['consty']}</h2>";
                                     echo "<p class='text'>
                                             {$product['desc']}
                                         </p>";
@@ -126,23 +119,24 @@
 
                                     echo "<ul>";
                                         echo "<il>";
-                                            echo "<p>Milage: {$product['milage']}";
+                                            echo "<p>mileage: {$product['mileage']}";
                                         echo "</il>";
 
                                         echo "<il>";
                                             echo "<p>Transmission: {$product['transmission']}";
                                         echo "</il>";
-
-                                        echo "<il>";
-                                            echo "<p>Drivetrain: {$product['drivetrain']}";
-                                        echo "</il>";
-
                                         echo "<il>";
                                             echo "<p>Engine: {$product['engine']}";
                                         echo "</il>";
 
                                         echo "<il>";
                                             echo "<p>Fuel: {$product['fuel']}";
+                                        echo "</il>";
+                                        echo "<il>";
+                                            echo "<p>Year: {$product['consty']}";
+                                        echo "</il>";
+                                        echo "<il>";
+                                            echo "<p>HP: {$product['hp']}";
                                         echo "</il>";
                                     echo "</ul>";
 
@@ -186,12 +180,11 @@
         <div class="container">
             <div class="grid-4">
                 <div class="grid-4-col footer-about">
-                    <h3 class="title-sm">About "The Classic Car Collection"</h3>
+                    <h3 class="title-sm">About "Moto Garage"</h3>
                     <p class="text">
-                        Welcome to "The Classic Car Collection," where automotive nostalgia meets
-                        modern technology. Our website is a digital haven for car enthusiasts,
-                        designed to provide a seamless experience for those who
-                        appreciate the timeless beauty of classic automobiles.
+                    We are Moto Garage, we are a place of love for motorcycles since 1954, ready to give you the best deals.
+                    We sell you your favourite motorcycles for a low price and buy your motorcycles aswell.
+                    We are happy to be of service!
                     </p>
                 </div>
 
@@ -199,16 +192,10 @@
                     <h3 class="title-sm">Links</h3>
                     <ul>
                         <li>
-                            <a href="#">Inventory</a>
+                            <a href="./inventory/">Inventory</a>
                         </li>
                         <li>
-                            <a href="#">Sell Your Classic Car!</a>
-                        </li>
-                        <li>
-                            <a href="#">Our Blog</a>
-                        </li>
-                        <li>
-                            <a href="#">About us</a>
+                            <a href="./about-us/">About us</a>
                         </li>
                     </ul>
                 </div>
@@ -217,16 +204,7 @@
                     <h3 class="title-sm">What We do Here</h3>
                     <ul>
                         <li>
-                            <a href="#">Sell Classic Cars</a>
-                        </li>
-                        <li>
-                            <a href="#">Buy Classic Cars</a>
-                        </li>
-                        <li>
-                            <a href="#">Blog about our adventures</a>
-                        </li>
-                        <li>
-                            <a href="#">Always adding new cars to the collecion</a>
+                            <a href="#">Sell motorcycles</a>
                         </li>
                     </ul>
                 </div>
@@ -236,7 +214,7 @@
                 <div class="copyright">
                     <p class="text">
                         Copyright&copy;2023 All rights reserved by
-                        <span>The Classic Car Collection</span>
+                        <span>Moto Garage</span>
                     </p>
                 </div>
 
@@ -245,18 +223,16 @@
                         <h3>Follow Creator</h3>
                         <span class="footer-line"></span>
                         <div class="social-media">
-                            <a href="https://github.com/Rick05Baas">
+                            <a href="https://github.com/Josot" target="_blank">
                                 <i class="fab fa-github"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/joost-van-ewijk/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://twitter.com/KidYeh" target="_blank">
                                 <i class="fab fa-twitter"></i>
                             </a>
-                            <a href="#">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#">
-                                <i class="fab fa-question"></i>
-                            </a>
+
                         </div>
                     </div>
 
@@ -269,7 +245,6 @@
             </div>
         </div>
     </footer>
-
 
 
     <script src="../javascript/hamburgermenu.js"></script>

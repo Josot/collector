@@ -28,16 +28,10 @@
                     <div class="links">
                         <ul>
                             <li>
-                                <a href="">Sell us your car!</a>
-                            </li>
-                            <li>
-                                <a href="">About us</a>
+                                <a href="../about-us/">About us</a>
                             </li>
                             <li>
                                 <a href="../inventory/">Inventory</a>
-                            </li>
-                            <li>
-                                <a href="">Blog</a>
                             </li>
                             <li>
                                 <a href="../" class="active">Home</a>
@@ -49,7 +43,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- NAVBAR -->
 
             <?php
             class MyDB extends SQLite3
@@ -95,6 +88,26 @@
                                 echo "</div class='column-1'>";
 
                                 echo "<div class='column-2 image'>";
+                                echo "<div class='column-2 image'>
+                                <form action='thanks-order.php' method='POST'>
+                                    <label for='product_name'>Product Name:</label>
+                                    <input type='text' readonly id='product_name' name='product_name' value='Ford Thunderbird'>
+                                    <label for='customerName'>Name Customer:</label>
+                                    <input type='text' id='customerName' name='customerName'>
+                                    <label for='customerMail'>Email Customer:</label>
+                                    <input type='text' id='customerMail' name='customerMail'>
+                                    <label for='shipping_address'>Full Address: Country, Zip-code, City, Street & Housenumber</label>
+                                    <textarea id='shipping_address' name='shipping_address' rows='4' required></textarea>
+                                    <label for='payment_method'>Payment Method:</label>
+                                    <select id='payment_method' name='payment_method' required>
+                                        <option value='credit_card'>Credit Card</option>
+                                        <option value='paypal'>PayPal</option>
+                                        <option value='bank_transfer'>Bank Transfer</option>
+                                    </select>
+                                    <input type='submit' value='Submit Request'>
+                                    <br>
+                                    <label for='Tip'><span>(Free shipping in the Netherlands)</span></label>
+                                </form>";
 
                                 echo "</div class='column-2 image'>";
 
@@ -118,23 +131,24 @@
 
                                     echo "<ul>";
                                         echo "<il>";
-                                            echo "<p>Milage: {$product['milage']}";
+                                            echo "<p>mileage: {$product['mileage']}";
                                         echo "</il>";
 
                                         echo "<il>";
                                             echo "<p>Transmission: {$product['transmission']}";
                                         echo "</il>";
-
-                                        echo "<il>";
-                                            echo "<p>Drivetrain: {$product['drivetrain']}";
-                                        echo "</il>";
-
                                         echo "<il>";
                                             echo "<p>Engine: {$product['engine']}";
                                         echo "</il>";
 
                                         echo "<il>";
                                             echo "<p>Fuel: {$product['fuel']}";
+                                        echo "</il>";
+                                        echo "<il>";
+                                            echo "<p>Year: {$product['consty']}";
+                                        echo "</il>";
+                                        echo "<il>";
+                                            echo "<p>HP: {$product['hp']}";
                                         echo "</il>";
                                     echo "</ul>";
 

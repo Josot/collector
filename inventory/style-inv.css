@@ -11,7 +11,7 @@
     justify-content: center;
     flex-direction: column;
 }
-
+/* 
 .navbar-inventory {
     margin: 0 auto;
     display: flex;
@@ -22,19 +22,7 @@
     border-radius: 5px;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
     padding: 1rem;
-}
-.navbar-inventory-search {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 60rem;
-    margin-top: 2rem;
-    align-items: center;
-    padding: 5rem, 5rem, 5rem, 5rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-    padding: 1rem;
-}
+} */
 
 .links a.active-inv {
     background-color: var(--main-color);
@@ -48,46 +36,6 @@
     color: var(--light-one);
     background-color: #4e4e88;
 }
-
-
-
-
-/* Search bar */
-.search-bar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* margin-top: 20px; */
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-
-    /* border: black 1px solid;
-    border-radius: 15px; */
-}
-.search-input {
-    padding: 10px;
-    border: none;
-    border-radius: 25px;
-    width: 300px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-size: 16px;
-    outline: none;
-}
-.search-button {
-    background-color: #3c3c86;;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
-.search-button:hover {
-    background-color: #349b00;
-}
-/* Search bar */
 
 
 /* Project Items Inventory */
