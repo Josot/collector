@@ -102,13 +102,6 @@
                                 echo "<textarea id='shipping_address'
                                 name='shipping_address' rows='4' required></textarea>";
 
-                                echo "<label for='payment_method'>Payment Method:</label>";
-                                echo "<select id='payment_method' name='payment_method' required>";
-                                    echo "<option value='credit_card'>Credit Card</option>";
-                                    echo "<option value='paypal'>PayPal</option>";
-                                    echo "<option value='bank_transfer'>Bank Transfer</option>";
-                                    echo "</select>";
-
                                     echo "<input type='submit' value='Submit Request'><br>";
                                 
                                 echo "<label for='Tip'><span>(Free shipping in the Netherlands)</span></label>";
@@ -185,8 +178,6 @@
                 } else {
                     echo "Product not found.";
                 }
-            } else {
-                echo "Product ID not provided.";
             }
 
             // Close the database connection

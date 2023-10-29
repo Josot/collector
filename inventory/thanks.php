@@ -52,14 +52,11 @@
                 <div class="area">
                     <div class="container grid-2">
                         <div class="column-1">
-                            <h1 class="header-title" style="color: white;">Our Inventory</h1>
+                            <h1 class="header-title" style="color: white;">Thank you!</h1>
                             <p class="text" style="color: white;">
-                            Nestled at the soul of our enterprise resides a hidden gem of motorcycle heritage,
-                             painstakingly curated and safeguarded for the most discerning aficionados.
-                              Our modern motorcycle assortment serves as a living tribute to the relentless innovation
-                               and artistic mastery that define the world of high-performance biking.
+                            Thank you for your order! Our staff will get back to you as soon as possible, in the meanwhile, enjoy the ride!
                             </p>
-                            <a href="#inventory" class="btn">Take me there!</a>
+                            <a href="../" class="btn">back to home!</a>
                         </div>
 
                         <div class="column-2 image">
@@ -72,65 +69,6 @@
             </div>
 
         </header>
-
-        <div id="inventory" class="inventory">
-            <div class="container-inv">
-                
-                <img src="../dbs/inventory.db" alt="">
-
-                <div class="inventory-items">
-                    <?php
-
-                    
-
-                    class MyDB extends SQLite3
-                    {
-                        function __construct()
-                        {
-                            $this->open('../dbs/inventory.db');
-                        }
-                    }
-
-
-                    // selecting files
-                    $sql = <<<EOF
-                        SELECT * from inventory;
-                    EOF;
-
-                    $db = new MyDB();
-
-
-
-                    // echoing table
-                    $ret = $db->query($sql);
-                    while ($row = $ret->fetchArray(SQLITE3_ASSOC)) {
-
-                        if ($row['sold'] == 'true') {
-                            continue;
-                        }
-                        $product_id = $row['ID'];
-
-                        echo "<projects>";
-                            echo "<div class='hidden'>{$row['ID']}</div>";
-                            echo "<div class='hidden'>Sold? {$row['sold']}</div>";
-                            echo "<div class=''><h1>{$row['brand']}</h1></div>";
-                            echo "<div class=''><h2>{$row['model']}</h2></div>";
-                            echo "<div class=''><h3>{$row['consty']}</h3></div>";
-                            echo "<div class=''>{$row['price']}</div>";
-                            echo "<img class='car-img-inv' src='../media/uploads/{$row['image']}'>";
-                            echo "<div class=''>Engine: {$row['engine']}</div>";
-                            echo "<div class=''>Fuel: {$row['fuel']}</div>";
-                            echo "<a class='active-inv' href='product_details.php?id=$product_id'>Order Now</a>";
-                        echo "</projects>";
-                    }
-
-                    $db->close();
-
-                    ?>
-                </div>
-
-            </div>
-        </div>
 
     </main>
     <footer class="footer">
