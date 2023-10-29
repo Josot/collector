@@ -88,26 +88,33 @@
                                 echo "</div class='column-1'>";
 
                                 echo "<div class='column-2 image'>";
-                                echo "<div class='column-2 image'>
-                                <form action='thanks-order.php' method='POST'>
-                                    <label for='product_name'>Product Name:</label>
-                                    <input type='text' readonly id='product_name' name='product_name' value='Ford Thunderbird'>
-                                    <label for='customerName'>Name Customer:</label>
-                                    <input type='text' id='customerName' name='customerName'>
-                                    <label for='customerMail'>Email Customer:</label>
-                                    <input type='text' id='customerMail' name='customerMail'>
-                                    <label for='shipping_address'>Full Address: Country, Zip-code, City, Street & Housenumber</label>
-                                    <textarea id='shipping_address' name='shipping_address' rows='4' required></textarea>
-                                    <label for='payment_method'>Payment Method:</label>
-                                    <select id='payment_method' name='payment_method' required>
-                                        <option value='credit_card'>Credit Card</option>
-                                        <option value='paypal'>PayPal</option>
-                                        <option value='bank_transfer'>Bank Transfer</option>
-                                    </select>
-                                    <input type='submit' value='Submit Request'>
-                                    <br>
-                                    <label for='Tip'><span>(Free shipping in the Netherlands)</span></label>
-                                </form>";
+                                echo "<form action='thank-you.php' method='POST'>";
+                                echo "<label for='product_name'>Product Name:</label>";
+                                echo '<input type="text" READONLY id="product_name" name="product_name" value="' . htmlspecialchars($product['brand']) . " " . htmlspecialchars($product['model']) . '">';
+
+                                echo "<label for='customerName'>Name Customer:</label>";
+                                echo "<input type='text' id='customerName' name='customerName' required>";
+
+                                echo "<label for='customerMail'>Email Customer:</label>";
+                                echo "<input type='text' id='customerMail' name='customerMail' required>";
+
+                                echo "<label for='shipping_address'>Full Address: Country, Zip-code, City, Street & Housenumber</label>";
+                                echo "<textarea id='shipping_address'
+                                name='shipping_address' rows='4' required></textarea>";
+
+                                echo "<label for='payment_method'>Payment Method:</label>";
+                                echo "<select id='payment_method' name='payment_method' required>";
+                                    echo "<option value='credit_card'>Credit Card</option>";
+                                    echo "<option value='paypal'>PayPal</option>";
+                                    echo "<option value='bank_transfer'>Bank Transfer</option>";
+                                    echo "</select>";
+
+                                    echo "<input type='submit' value='Submit Request'><br>";
+                                
+                                echo "<label for='Tip'><span>(Free shipping in the Netherlands)</span></label>";
+
+                                echo "</form>";
+                            
 
                                 echo "</div class='column-2 image'>";
 

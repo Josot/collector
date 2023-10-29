@@ -11,18 +11,6 @@
     justify-content: center;
     flex-direction: column;
 }
-/* 
-.navbar-inventory {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    width: 60rem;
-    align-items: center;
-    padding: 5rem, 5rem, 5rem, 5rem;
-    border-radius: 5px;
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-    padding: 1rem;
-} */
 
 .links a.active-inv {
     background-color: var(--main-color);
@@ -60,19 +48,12 @@
 projects{
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     flex-direction: column;
-    /* width: 50%; */
     max-height: 30rem;
     min-height: 30rem;
     text-align: center;
-
     margin: 1rem 1rem 1rem 1rem;
-
-
-    /* border: 1px solid black; */
     border-radius: 2%;
-
     padding: 40px 30px;
     width: 300px;
     background: #fff;
@@ -127,17 +108,49 @@ projects a.active-inv:hover {
 }
 /* specs */
 
-
-
-/* .box {
-    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
-
-} */
-
 .column-1 ul {
     font-size: 2rem;
 }
 
-/* .navbar-inventory links ul {
+.column-2 {
+    padding: 20px;
+}
+
+form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+label {
     display: block;
-} */
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
